@@ -1,8 +1,36 @@
 /* style.css */
 
-* {
-  font-family: sans-serif;
+.silkscreen-regular {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
+.silkscreen-bold {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.bitcount-grid-double {
+  font-family: "Bitcount Grid Double", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
+
+
+
+* {
+  font-family: "Bitcount Grid Double", system-ui;
+}
+
 
 body {
   align-items: center;
@@ -15,7 +43,7 @@ body.blue {
 }
 
 body.blue>main {
-  background-color: white;
+  background-color: lightblue;
   border-radius: 5px;
   padding: 30px
 }
@@ -29,6 +57,13 @@ h2 {
   font-size: 2rem;
   margin: 0;
   text-align: center;
+  color: gold;
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+
 }
 
 body>header {
@@ -42,6 +77,7 @@ body>header {
 }
 
 body>header a {
+  
   border-bottom: 2px solid rgb(155, 155, 155);
   color: rgb(155, 155, 155);
   font-size: 1.4rem;
@@ -50,6 +86,7 @@ body>header a {
 }
 
 body.blue>header a {
+  
   border-bottom: 2px solid black;
   color: black;
   font-size: 1.4rem;
@@ -58,6 +95,7 @@ body.blue>header a {
 }
 
 body>header a:hover {
+  
   border-bottom: 2px solid transparent;
 }
 
@@ -78,8 +116,8 @@ main>section {
 }
 
 #explore button, #explore select {
-  height: 30px;
-  width: 425px;
+  height: 40px;
+  width: 435px;
 }
 
 #explore img {

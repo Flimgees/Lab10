@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +16,7 @@
   <script src="assets/scripts/speechSynth.js" type="module"></script>
 </head>
 
-<body>
+<body class = "blue">
   <header>
     <nav>
       <a href="index.html" title="Go to  party horn">Party Horn</a>
@@ -22,16 +25,28 @@
   <main>
     <section id="explore">
       <header>
-        <h2>Speech Synthesizer</h2>
+        <h2 class = "silkscreen-bold" style = "color: black">Speech Synthesizer</h2>
       </header>
       <img src="assets/images/smiling.png" alt="Smiling face" />
       <textarea name="text-to-speak" id="text-to-speak" rows="10" placeholder="Text to speak here"></textarea>
       <select name="voice" id="voice-select">
         <option value="select" disabled selected>Select Voice:</option>
       </select>
-      <button>Press to Talk</button>
+      <button class = "silkscreen-bold">Press to Talk</button>
     </section>
   </main>
+  <script>
+     // Generate a random number between 0 and 1
+     const randomNumber = Math.random();
+     // Determine if the class should be applied
+     const shouldApplyClass = randomNumber < 0.5;
+     // Get the body element
+     let body = document.querySelector('body');
+     // Apply or remove the "blue" class based on the random number
+     if (shouldApplyClass) {
+          body.classList.add('blue');
+     }
+  </script>
 </body>
 
 </html>

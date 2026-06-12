@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +19,7 @@
   <script src="assets/scripts/partyHorn.js" type="module"></script>
 </head>
 
-<body>
+<body class = "blue">
   <header>
     <nav>
       <a href="speechSynth.html" title="Go to speech synthesizer">Speech Synthesizer</a>
@@ -42,6 +45,19 @@
       <audio class="hidden" src=""></audio>
     </section>
   </main>
+
+  <script>
+     // Generate a random number between 0 and 1
+     const randomNumber = Math.random();
+     // Determine if the class should be applied
+     const shouldApplyClass = randomNumber < 0.5;
+     // Get the body element
+     let body = document.querySelector('body');
+     // Apply or remove the "blue" class based on the random number
+     if (shouldApplyClass) {
+          body.classList.add('blue');
+     }
+  </script>
 </body>
 
 </html>
